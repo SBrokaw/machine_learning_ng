@@ -8,10 +8,12 @@ from matplotlib.ticker import MaxNLocator
 from matplotlib.gridspec import GridSpec
 from matplotlib.colors import LinearSegmentedColormap
 from ipywidgets import interact
-from lab_utils_common import compute_cost
-from lab_utils_common import dlblue, dlorange, dldarkred, dlmagenta, dlpurple, dlcolors
+from course1.lib.lab_utils_common import compute_cost
+from course1.lib.lab_utils_common import dlblue, dlorange, dldarkred, dlmagenta, dlpurple, dlcolors
+from pathlib import Path
 
-plt.style.use('./deeplearning.mplstyle')
+STYLE_PATH = Path(__file__).resolve().parent / "deeplearning.mplstyle"
+plt.style.use(STYLE_PATH)
 n_bin = 5
 dlcm = LinearSegmentedColormap.from_list(
         'dl_map', dlcolors, N=n_bin)

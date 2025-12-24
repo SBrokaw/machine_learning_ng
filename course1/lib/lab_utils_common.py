@@ -4,9 +4,11 @@ lab_utils_common.py
 """
 
 import numpy as np
+from pathlib import Path
 import matplotlib.pyplot as plt
 
-plt.style.use('./deeplearning.mplstyle')
+STYLE_PATH = Path(__file__).resolve().parent / "deeplearning.mplstyle"
+plt.style.use(STYLE_PATH)
 dlblue = '#0096ff'; dlorange = '#FF9300'; dldarkred='#C00000'; dlmagenta='#FF40FF'; dlpurple='#7030A0';
 dlcolors = [dlblue, dlorange, dldarkred, dlmagenta, dlpurple]
 dlc = dict(dlblue = '#0096ff', dlorange = '#FF9300', dldarkred='#C00000', dlmagenta='#FF40FF', dlpurple='#7030A0')

@@ -1,2 +1,4 @@
 .venv/
 *.ipynb
+*Zone.Identifier*
+*__pycache__*
